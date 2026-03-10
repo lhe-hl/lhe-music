@@ -1,0 +1,240 @@
+// out: ../css/index.css
+@import url(./base.less);
+@myvw:3.75vw;
+
+body {
+    background-color: #f9fafb;
+}
+
+// 头部
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0 (15 / @myvw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: (50 / @myvw);
+    background-color: #fff;
+
+    .left {
+        width: (235 / @myvw);
+        height: (50 / @myvw);
+        background-image: url(../assets/lhe-muic.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .right {
+        a {
+            display: block;
+            width: (80 / @myvw);
+            height: (30 / @myvw);
+            background-color: #22ff7b;
+            border-radius: (15 / @myvw);
+            text-align: center;
+            line-height: (30 / @myvw);
+            font-size: (14 / @myvw);
+
+            &:hover {
+                background-color: #61cc1f;
+            }
+        }
+    }
+}
+
+// 搜索框
+.search {
+    margin-top: (50 / @myvw);
+    padding: (10 / @myvw) (15 / @myvw);
+    height: (52 / @myvw);
+    // background-color: pink;
+
+    .txt {
+        // display: flex;
+        height: (32 / @myvw);
+        background-color: #f2f4f5;
+        border-radius: (16 / @myvw);
+        text-align: center;
+        line-height: (32 / @myvw);
+        color: #a1a4b3;
+        font-size: (14 / @myvw);
+
+        .iconfont {
+            font-size: (16 / @myvw);
+        }
+    }
+}
+
+// banner
+.banner {
+    padding: 0 (15 / @myvw);
+    height: (108 / @myvw);
+   overflow: hidden;
+    // background-color: pink;
+
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        //横向滚动
+        overflow-x: auto;
+        //隐藏滚动条
+        scrollbar-width: none;
+        li {
+            //关键！li不会缩小宽度是固定的
+            flex-shrink: 0;
+            width: (345 / @myvw);
+            height: (108 / @myvw);
+            img {
+                width: 100%;
+                height: 100%;
+                //cover是缩放图片到全部覆盖 如果图片比例与父级盒子不同，避免图片被挤压
+                object-fit: cover;
+                border-radius: (8 / @myvw);
+            }
+        }
+    }
+}
+
+//排行榜
+.list {
+    margin-top: (20 / @myvw);
+    padding: 0 (15 / @myvw);
+    .content {
+        ul {
+            li {
+                display: flex;
+                margin-bottom: (16 / @myvw);
+                width: (345 / @myvw);
+                height: (105 / @myvw);
+                background-color: #fff;
+                border-radius: (8 / @myvw);
+
+                .pic {
+                    width: (105 / @myvw);
+                    height: (105 / @myvw);
+                    margin-right: (20 / @myvw);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: (8 / @myvw);
+                    }
+                }
+                .txt {
+                    a {
+                        display: block;
+                        color: #a1a4b3;
+                        font-size: (12 / @myvw);
+                        line-height: (20 / @myvw);
+                    }
+                    h4 {
+                        
+                        font-weight: normal;
+                        .more {
+                            color: #000;
+                            font-size: (14 / @myvw);
+                            line-height: (28 / @myvw);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.title {
+    margin-bottom: (16 / @myvw);
+    display: flex;
+    justify-content: space-between;
+    line-height: (25 / @myvw);
+    h3 {
+        font-size: (20 / @myvw);
+    }
+    a {
+        font-size: (12 / @myvw);
+        color: #a1a4b3;
+    }
+}
+
+
+.recommend {
+    margin-top: (20 / @myvw);
+    padding: 0 (15 / @myvw);
+
+    .content {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                margin-bottom: (16 / @myvw);
+                width: (105 / @myvw);
+                height: (143 / @myvw);
+                // background-color: pink;
+                .pic {
+                    position: relative;
+                    width: (105 / @myvw);
+                    height: (105 / @myvw);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: (8 / @myvw);
+                    }
+                    .cover {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: (70 / @myvw);
+                        height: (28 / @myvw);
+                        background-color: rgba(0, 0, 0, 0.7);
+                        color: #fff;
+                        font-size: (14 / @myvw);
+                        line-height: (28 / @myvw);
+                        text-align: center;
+                        border-radius: (8 / @myvw);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 下载
+.download {
+    position: fixed;
+    left: (88 / @myvw);
+    bottom: (30 / @myvw);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 (15 / @myvw);
+    width: (205 / @myvw);
+    height: (45 / @myvw);
+    background-color: #fff;
+    border-radius: (22.5 / @myvw);
+    align-items: center;
+    .pic {
+        width: (25 / @myvw);
+        height: (25 / @myvw);
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .txt {
+        text-align: center;
+        line-height: (45 / @myvw);
+        p {
+            font-size: (12 / @myvw);
+            color: #1a1a1a;
+        }
+    }
+}
+
+
+.lhe {
+    text-align: center;
+}

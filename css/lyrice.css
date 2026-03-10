@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: "微软雅黑", sans-serif;
+  background-color: #f8f8f8;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.lyrics {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 2.2;
+  color: #333;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.lyrics h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #c22837;
+}
